@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
 
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>CombatFIT</title>
+    <title>CombatFIT</title>
 
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <!-- CSS
     ================================================== -->
@@ -39,59 +40,53 @@
     <link href="style.css" rel="stylesheet">
 
     <!-- Google fonts -->
-     <script type="text/javascript">
-            (function() {
-                var link_element = document.createElement("link"),
-                    s = document.getElementsByTagName("script")[0];
-                if (window.location.protocol !== "http:" && window.location.protocol !== "https:") {
-                    link_element.href = "http:";
-                }
-                link_element.href += "//fonts.googleapis.com/css?family=Lato:400,100italic,100,300italic,400italic,700italic,700,900italic,900";
-                link_element.rel = "stylesheet";
-                link_element.type = "text/css";
-                s.parentNode.insertBefore(link_element, s);
-            })();
-        </script>
-        <SCRIPT language="JavaScript">
+    <script type="text/javascript">
+        (function() {
+            var link_element = document.createElement("link"),
+                s = document.getElementsByTagName("script")[0];
+            if (window.location.protocol !== "http:" && window.location.protocol !== "https:") {
+                link_element.href = "http:";
+            }
+            link_element.href += "//fonts.googleapis.com/css?family=Lato:400,100italic,100,300italic,400italic,700italic,700,900italic,900";
+            link_element.rel = "stylesheet";
+            link_element.type = "text/css";
+            s.parentNode.insertBefore(link_element, s);
+        })();
+    </script>
+    <SCRIPT language="JavaScript">
+        function valida() {
+            var ok = true;
 
-function valida ()
-{
-  var ok = true;
+            if (form.nome.value == "") {
+                alert("Por favor, preencha o campo NOME");
+                form.nome.focus();
+                ok = false;
+                return (false);
+            }
 
-  if (form.nome.value=="")
-  {
-  alert("Por favor, preencha o campo NOME");
-  form.nome.focus();
-  ok = false;
-  return(false);
-  }
+            if (form.email.value == "") {
+                alert("Por favor, preencha o campo E-MAIL");
+                form.email.focus();
+                ok = false;
+                return (false);
+            }
 
-  if (form.email.value=="")
-  {
-  alert("Por favor, preencha o campo E-MAIL");
-  form.email.focus();
-  ok = false;
-  return(false);
-  }
+            if (form.email.value.search("@") == -1 || form.email.value.search("[.*]") == -1) {
+                alert("Preencha o campo EMAIL corretamente!");
+                form.email.focus();
+                ok = false;
+                return (false);
+            }
 
-  if (form.email.value.search("@") == -1 || form.email.value.search("[.*]") == -1)
-  {
-  alert("Preencha o campo EMAIL corretamente!");
-  form.email.focus();
-  ok = false;
-  return(false);
-  }
+            if (form.msg.value == "") {
+                alert("Por favor, escreva sua MENSAGEM");
+                form.msg.focus();
+                ok = false;
+                return (false);
+            }
 
-  if (form.msg.value=="")
-  {
-  alert("Por favor, escreva sua MENSAGEM");
-  form.msg.focus();
-  ok = false;
-  return(false);
-  }
-
-}
-</script>
+        }
+    </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -99,11 +94,12 @@ function valida ()
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-     <!-- BEGAIN PRELOADER -->
+</head>
+
+<body>
+    <!-- BEGAIN PRELOADER -->
     <div id="preloader">
-      <div id="status">&nbsp;</div>
+        <div id="status">&nbsp;</div>
     </div>
     <!-- END PRELOADER -->
 
@@ -113,52 +109,53 @@ function valida ()
 
     <!--=========== BEGIN HEADER SECTION ================-->
     <header id="header">
-      <!-- BEGIN MENU -->
-      <div class="menu_area">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-          <div class="container">
-          <div class="navbar">
-            <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <!-- BEGIN MENU -->
+        <div class="menu_area">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar">
+                        <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
 
-            <!-- LOGO -->
+                        <!-- LOGO -->
 
-            <!-- TEXT BASED LOGO
+                        <!-- TEXT BASED LOGO
             <a class="navbar-brand" href="#">Single<span>Pro</span></a>
              -->
-            <!-- IMG BASED LOGO  -->
+                        <!-- IMG BASED LOGO  -->
 
-          <a class="navbar-brand" href="#"><img src="img/logo.png" alt="CombatFit"></a>
+                        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="CombatFit"></a>
 
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
 
-            <ul id="top-menu" class="nav navbar-nav main_nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">Academia</a></li>
-              <li><a href="#works">Aulas</a></li>
-              <li><a href="#team">Professores</a></li>
-              <li><a href="#contact">Contato</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-          </div>
-        </nav>
-      </div>
-      <!-- END MENU -->
+                        <ul id="top-menu" class="nav navbar-nav main_nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#about">Academia</a></li>
+                            <li><a href="#works">Aulas</a></li>
+                            <li><a href="#team">Professores</a></li>
+                            <li><a href="#contact">Contato</a></li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </nav>
+        </div>
+        <!-- END MENU -->
 
-      <!-- BEGIN SLIDER AREA-->
-      <div class="slider_area">
-        <!-- BEGIN SLIDER-->
-        <div id="slides">
-          <ul class="slides-container">
+        <!-- BEGIN SLIDER AREA-->
+        <div class="slider_area">
+            <!-- BEGIN SLIDER-->
+            <div id="slides">
+                <ul class="slides-container">
 
-            <!-- THE FIRST SLIDE-->
-            <!--li>
+                    <!-- THE FIRST SLIDE-->
+                    <!--li>
               <!-- FIRST SLIDE OVERLAY >
               <div class="slider_overlay"></div>
               <!-- FIRST SLIDE MAIN IMAGE >
@@ -171,63 +168,63 @@ function valida ()
               </div>
             </li-->
 
-            <!-- THE SECOND SLIDE-->
-             <li>
-              <!-- FIRST SLIDE OVERLAY -->
-              <div class="slider_overlay"></div>
-              <!-- FIRST SLIDE MAIN IMAGE -->
-              <img class="img-responsive" src="img/full-slider/full-slide3.jpg" alt="img">
-              <!-- FIRST SLIDE CAPTION-->
-              <div class="slider_caption">
-                <h2>comece</h2>
-                <p>seus treinos hoje</p>
-                <!--a href="#" class="slider_btn">EXPERIMENTE</a-->
-              </div>
-            </li>
+                    <!-- THE SECOND SLIDE-->
+                    <li>
+                        <!-- FIRST SLIDE OVERLAY -->
+                        <div class="slider_overlay"></div>
+                        <!-- FIRST SLIDE MAIN IMAGE -->
+                        <img class="img-responsive" src="img/full-slider/full-slide3.jpg" alt="img">
+                        <!-- FIRST SLIDE CAPTION-->
+                        <div class="slider_caption">
+                            <h2>comece</h2>
+                            <p>seus treinos hoje</p>
+                            <!--a href="#" class="slider_btn">EXPERIMENTE</a-->
+                        </div>
+                    </li>
 
-            <li>
-              <!-- SECOND SLIDE OVERLAY -->
-              <div class="slider_overlay"></div>
-              <!-- SECOND SLIDE MAIN IMAGE -->
-              <img class="img-responsive" src="img/full-slider/full-slide2.jpg" alt="img">
-              <!-- SECOND SLIDE CAPTION-->
-              <div class="slider_caption">
-                <h2>APRENDA</h2>
-                <p>A ser versátil</p>
+                    <li>
+                        <!-- SECOND SLIDE OVERLAY -->
+                        <div class="slider_overlay"></div>
+                        <!-- SECOND SLIDE MAIN IMAGE -->
+                        <img class="img-responsive" src="img/full-slider/full-slide2.jpg" alt="img">
+                        <!-- SECOND SLIDE CAPTION-->
+                        <div class="slider_caption">
+                            <h2>APRENDA</h2>
+                            <p>A ser versátil</p>
 
-              </div>
-            </li>
+                        </div>
+                    </li>
 
-            <!-- THE THIRD SLIDE-->
-            <li>
-              <!-- THIRD SLIDE OVERLAY -->
-              <div class="slider_overlay"></div>
-              <!-- THIRD SLIDE MAIN IMAGE -->
-              <img src="img/full-slider/full-slide1.jpg" alt="img">
-              <!-- THIRD SLIDE CAPTION-->
-              <div class="slider_caption">
-                <h2>JUNTE-SE</h2>
-                <p>AO NOSSO Estilo de vida</p>
-              </div>
-            </li>
-          </ul>
-          <!-- BEGAIN SLIDER NAVIGATION -->
-          <nav class="slides-navigation">
-            <!-- PREV IN THE SLIDE -->
-            <a class="prev" href="/item1">
-              <span class="icon-wrap"></span>
-              <h3><strong>Prev</strong></h3>
-            </a>
-            <!-- NEXT IN THE SLIDE -->
-            <a class="next" href="/item3">
-              <span class="icon-wrap"></span>
-              <h3><strong>Next</strong></h3>
-            </a>
-          </nav>
+                    <!-- THE THIRD SLIDE-->
+                    <li>
+                        <!-- THIRD SLIDE OVERLAY -->
+                        <div class="slider_overlay"></div>
+                        <!-- THIRD SLIDE MAIN IMAGE -->
+                        <img src="img/full-slider/full-slide1.jpg" alt="img">
+                        <!-- THIRD SLIDE CAPTION-->
+                        <div class="slider_caption">
+                            <h2>JUNTE-SE</h2>
+                            <p>AO NOSSO Estilo de vida</p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- BEGAIN SLIDER NAVIGATION -->
+                <nav class="slides-navigation">
+                    <!-- PREV IN THE SLIDE -->
+                    <a class="prev" href="/item1">
+                        <span class="icon-wrap"></span>
+                        <h3><strong>Prev</strong></h3>
+                    </a>
+                    <!-- NEXT IN THE SLIDE -->
+                    <a class="next" href="/item3">
+                        <span class="icon-wrap"></span>
+                        <h3><strong>Next</strong></h3>
+                    </a>
+                </nav>
+            </div>
+            <!-- END SLIDER-->
         </div>
-        <!-- END SLIDER-->
-      </div>
-      <!-- END SLIDER AREA -->
+        <!-- END SLIDER AREA -->
     </header>
     <!--=========== End HEADER SECTION ================-->
 
@@ -237,123 +234,137 @@ function valida ()
 
 
 
-      <section id="about">
+    <section id="about">
 
-  <div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-       <div class="heading">
-              <h2 class="wow fadeInLeftBig">venha</h2>
-              <h3 class="wow fadeInLeftBig animated ">para o nosso time</h3>
-            </div>
-            <div class="border_red">
-        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer  </p>
-
-        <p>As instalações são de primeira, e o ambiente climatizado. Temos convênio com estacionamento próximo.</p>
-        <p>Venha fazer parte deste time!!!</p>
-
-    <div class="clearfix">
-        <div id="thumbcarousel" class="carousel slide" data-interval="false">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="img/portfolio/01_mini.jpg"></div>
-                    <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="img/portfolio/02_mini.jpg"></div>
-                    <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="img/portfolio/03_mini.jpg"></div>
-
-                </div><!-- /item -->
-                <div class="item">
-                    <div data-target="#carousel" data-slide-to="3" class="thumb"><img src="img/portfolio/04_mini.jpg"></div>
-                    <div data-target="#carousel" data-slide-to="4" class="thumb"><img src="img/portfolio/05_mini.jpg"></div>
-                    <div data-target="#carousel" data-slide-to="5" class="thumb"><img src="img/portfolio/06_mini.jpg"></div>
-                </div>
-                     <div class="item">
-                    <div data-target="#carousel" data-slide-to="6" class="thumb"><img src="img/portfolio/07_mini.jpg"></div>
-                    <div data-target="#carousel" data-slide-to="7" class="thumb"><img src="img/portfolio/08_mini.jpg"></div>
-                    <div data-target="#carousel" data-slide-to="8" class="thumb"><img src="img/portfolio/09_mini.jpg"></div>
-                </div>
-                 <div class="item">
-                    <div data-target="#carousel" data-slide-to="9" class="thumb"><img src="img/portfolio/10_mini.jpg"></div>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="heading">
+                        <h2 class="wow fadeInLeftBig">venha</h2>
+                        <h3 class="wow fadeInLeftBig animated ">para o nosso time</h3>
                     </div>
-            </div><!-- /carousel-inner -->
-            <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div> <!-- /thumbcarousel -->
-    </div><!-- /clearfix -->
-    </div> <!-- /col-sm-6 -->
-    </div>
-    <div class="col-sm-6">
-         <div id="carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="img/portfolio/01.jpg">
-                </div>
-                <div class="item">
-                    <img src="img/portfolio/02.jpg">
-                </div>
-                <div class="item">
-                    <img src="img/portfolio/03.jpg">
-                </div>
-                <div class="item">
-                    <img src="img/portfolio/04.jpg">
-                </div>
-                <div class="item">
-                    <img src="img/portfolio/05.jpg">
-                </div>
-                <div class="item">
-                    <img src="img/portfolio/06.jpg">
-                </div>
-                <div class="item">
-                    <img src="img/portfolio/07.jpg">
-                </div>
-                <div class="item">
-                    <img src="img/portfolio/08.jpg">
-                </div>
-                <div class="item">
-                    <img src="img/portfolio/09.jpg">
-                </div>
-                 <div class="item">
-                    <img src="img/portfolio/10.jpg">
-                </div>
-                <div class="item">
-                    <img src="img/portfolio/11.jpg">
-                </div>
+                    <div class="border_red">
+                        <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer </p>
 
+                        <p>As instalações são de primeira, e o ambiente climatizado. Temos convênio com estacionamento próximo.</p>
+                        <p>Venha fazer parte deste time!!!</p>
+
+                        <div class="clearfix">
+                            <div id="thumbcarousel" class="carousel slide" data-interval="false">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="img/portfolio/01_mini.jpg"></div>
+                                        <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="img/portfolio/02_mini.jpg"></div>
+                                        <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="img/portfolio/03_mini.jpg"></div>
+
+                                    </div>
+                                    <!-- /item -->
+                                    <div class="item">
+                                        <div data-target="#carousel" data-slide-to="3" class="thumb"><img src="img/portfolio/04_mini.jpg"></div>
+                                        <div data-target="#carousel" data-slide-to="4" class="thumb"><img src="img/portfolio/05_mini.jpg"></div>
+                                        <div data-target="#carousel" data-slide-to="5" class="thumb"><img src="img/portfolio/06_mini.jpg"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div data-target="#carousel" data-slide-to="6" class="thumb"><img src="img/portfolio/07_mini.jpg"></div>
+                                        <div data-target="#carousel" data-slide-to="7" class="thumb"><img src="img/portfolio/08_mini.jpg"></div>
+                                        <div data-target="#carousel" data-slide-to="8" class="thumb"><img src="img/portfolio/09_mini.jpg"></div>
+                                    </div>
+                                    <div class="item">
+                                        <div data-target="#carousel" data-slide-to="9" class="thumb"><img src="img/portfolio/10_mini.jpg"></div>
+
+                                    </div>
+                                </div>
+                                <!-- /carousel-inner -->
+                                <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+                            <!-- /thumbcarousel -->
+                        </div>
+                        <!-- /clearfix -->
+                    </div>
+                    <!-- /col-sm-6 -->
+                </div>
+                <div class="col-sm-6">
+                    <div id="carousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="img/portfolio/01.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/portfolio/02.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/portfolio/03.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/portfolio/04.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/portfolio/05.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/portfolio/06.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/portfolio/07.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/portfolio/08.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/portfolio/09.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/portfolio/10.jpg">
+                            </div>
+                            <div class="item">
+                                <img src="img/portfolio/11.jpg">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /col-sm-6 -->
             </div>
+            <!-- /row -->
         </div>
-
-    </div> <!-- /col-sm-6 -->
-  </div> <!-- /row -->
-</div> <!-- /container -->
-</section>
+        <!-- /container -->
+    </section>
 
     <section id="works">
-     <div class="container">
-      <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-    <div class="slider_caption">
-                <h2 class="wow fadeInLeftBig">confira <span> nossa grade</span></h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="slider_caption">
+                        <h2 class="wow fadeInLeftBig">confira <span> nossa grade</span></h2>
 
-              </div>
-          <div class="table-responsive">
-          <table class="table"  border="1">
-            <thead>
-              <tr class="linhatop">
-                <th class="red" >horario</th>
-                <th>Segunda</strong></th>
-                <th> Terça</strong></th>
-                <th>Quarta</strong></th>
-                <th>Quinta</strong></th>
-                <th>Sexta</strong></th>
-                <th>Sabado</strong></th>
-              </tr>
-            </thead>
-            <tbody>
-              <!--tr>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table" border="1">
+                            <thead>
+                                <tr class="linhatop">
+                                    <th class="red">horario</th>
+                                    <th>Segunda</strong>
+                                    </th>
+                                    <th> Terça</strong>
+                                    </th>
+                                    <th>Quarta</strong>
+                                    </th>
+                                    <th>Quinta</strong>
+                                    </th>
+                                    <th>Sexta</strong>
+                                    </th>
+                                    <th>Sabado</strong>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--tr>
                 <td><strong>6:00 ás 7:00</strong></td>
                 <td >&nbsp;</td>
                 <td >--</td>
@@ -364,65 +375,68 @@ function valida ()
               </tr-->
 
 
-              <tr>
-                <td><strong>7:00 ás 8:00</strong></td>
-                <td><p>JIU JITSU <br>
-                  <br>
-                </p>
-                  <p>______________________ </p>
-                  <p>Boxe<br>
-                    <br>
-                  </p></td>
-                <td>MUAY THAI<br>
-                <br></td>
-                <td>JIU JITSU <br>
-                  s
-<p>_______________________ </p>
-Boxe<br>
-<br></td>
-                <td>MUAY THAI<br>
-                <br></td>
-                <td>JIU JITSU<br>
-                <br></td>
-                <td>--</td>
-              </tr>
+                                <tr>
+                                    <td><strong>7:00 ás 8:00</strong></td>
+                                    <td>
+                                        <p>JIU JITSU <br>
+                                            <br>
+                                        </p>
+                                        <p>______________________ </p>
+                                        <p>Boxe<br>
+                                            <br>
+                                        </p>
+                                    </td>
+                                    <td>MUAY THAI<br>
+                                        <br></td>
+                                    <td>JIU JITSU <br> s
+                                        <p>_______________________ </p>
+                                        Boxe<br>
+                                        <br></td>
+                                    <td>MUAY THAI<br>
+                                        <br></td>
+                                    <td>JIU JITSU<br>
+                                        <br></td>
+                                    <td>--</td>
+                                </tr>
 
-              <tr>
-               <td><strong>10:00 ás 11:30</strong></td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td>CAPOEIRA<br>
-                <br></td>
-              </tr>
+                                <tr>
+                                    <td><strong>10:00 ás 11:30</strong></td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>CAPOEIRA<br>
+                                        <br></td>
+                                </tr>
 
-               <tr>
-               <td><strong>11:30 ás 13:00</strong></td>
-                 <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td>--</td>
-                <td> --</td>
-              </tr>
+                                <tr>
+                                    <td><strong>11:30 ás 13:00</strong></td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td> --</td>
+                                </tr>
 
-                <tr>
-               <td><strong>12:15 ás 13:15</strong></td>
-                 <td>JIU JITSU <br>
-                  <br></td>
-                <td>JIU JITSU <br>
-                  <br></td>
-                <td>--</td>
-                <td>JIU JITSU <br>
-                  <br></td>
-                <td>--</td>
-                <td>--<BR/></td>
-              </tr>
+                                <tr>
+                                    <td><strong>12:15 ás 13:15</strong></td>
+                                    <td>JIU JITSU <br>
+                                        <br></td>
+                                    <td>JIU JITSU <br>
+                                        <br></td>
+                                    <td>--</td>
+                                    <td>JIU JITSU <br>
+                                        <br></td>
+                                    <td>--</td>
+                                    <td>--
+                                        <BR/>
+                                    </td>
+                                </tr>
 
 
-              <!--tr>
+                                <!--tr>
                <td><strong>12:30 ás 13:30</strong></td>
                  <td>--</td>
                 <td>--</td>
@@ -432,188 +446,193 @@ Boxe<br>
                 <td>--</td>
               </tr -->
 
-              <tr>
-                <td><strong>13:15 ás 14:15</strong></td>
-                <td>JIU JITSU <br>
-                <br></td>
-                <td>JIU JITSU <br>
-                <br></td>
-                <td> JIU JITSU NO GI</td>
-                <td>JIU JITSU <br>
-                <br></td>
-                <td>--<br></td>
-                <td>--</td>
-              </tr>
+                                <tr>
+                                    <td><strong>13:15 ás 14:15</strong></td>
+                                    <td>JIU JITSU <br>
+                                        <br></td>
+                                    <td>JIU JITSU <br>
+                                        <br></td>
+                                    <td> JIU JITSU NO GI</td>
+                                    <td>JIU JITSU <br>
+                                        <br></td>
+                                    <td>--<br></td>
+                                    <td>--</td>
+                                </tr>
 
-              <tr>
-               <td><strong>17:15 ás 18:30</strong></td>
-                <td>MUAY THAI<br>
-                <br></td>
-                <td>BOXE<br>
-                <br></td>
-                <td>MUAY THAI<br>
-                <br></td>
-                <td>BOXE<br>
-                <br></td>
-                <td>MUAY THAI<br>
-                <br></td>
-                <td>--</td>
-              </tr>
+                                <tr>
+                                    <td><strong>17:15 ás 18:30</strong></td>
+                                    <td>MUAY THAI<br>
+                                        <br></td>
+                                    <td>BOXE<br>
+                                        <br></td>
+                                    <td>MUAY THAI<br>
+                                        <br></td>
+                                    <td>BOXE<br>
+                                        <br></td>
+                                    <td>MUAY THAI<br>
+                                        <br></td>
+                                    <td>--</td>
+                                </tr>
 
-               <tr>
-               <td><strong>18:30 ás 20:00</strong></td>
-                <td>JIU JITSU</td>
-                <td>JIU JITSU </td>
-                <td>JIU JITSU<br>
-                 FEMININO&nbsp;</td>
-                <td>JIU JITSU</td>
-                <td> JIU JITSU FEMININO</td>
-              </tr>
+                                <tr>
+                                    <td><strong>18:30 ás 20:00</strong></td>
+                                    <td>JIU JITSU</td>
+                                    <td>JIU JITSU </td>
+                                    <td>JIU JITSU<br> FEMININO&nbsp;
+                                    </td>
+                                    <td>JIU JITSU</td>
+                                    <td> JIU JITSU FEMININO</td>
+                                </tr>
 
-                <tr>
-               <td><strong>18:45 ás 19:45</strong></td>
-                <td>BOXE</td>
-                <td>--</td>
-                <td>BOXE</td>
-                <td>--</td>
-                <td>BOXE</td>
-                <td>--</td>
-              </tr>
-              
-                <tr>
-               <td><strong>19:00 ás 20:00</strong></td>
-                <td>- -</td>
-                <td>--</td>
-                <td>--</td>
-                <td> CAPOEIRA <br></td>
-                <td>--</td>
-                <td>--</td>
-              </tr>
+                                <tr>
+                                    <td><strong>18:45 ás 19:45</strong></td>
+                                    <td>BOXE</td>
+                                    <td>--</td>
+                                    <td>BOXE</td>
+                                    <td>--</td>
+                                    <td>BOXE</td>
+                                    <td>--</td>
+                                </tr>
 
-              <tr>
-                <td><strong>20:00 ás 21:00</strong></td>
-                <td>MUAY THAI<BR/>
-</td>
-                <td>BOXE<BR/>
-</td>
-                <td>MUAY THAI<BR/>
-</td>
-                <td>BOXE<BR/>
-</td>
-                <td>MUAY THAI<BR/>
-</td>
-                <td>--</td>
-              </tr>
+                                <tr>
+                                    <td><strong>19:00 ás 20:00</strong></td>
+                                    <td>- -</td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                    <td> CAPOEIRA <br></td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                </tr>
 
-              <tr class="linhabotton">
-                <td><strong>20:30 ás 22:00</strong></td>
-                <td>JIU JITSU  <br/>
-</td>
-                <td>JIU JITSU <br/>
-</td>
-                <td>JIU JITSU <br/>
-</td>
-                <td>JIU JITSU <br/>
-</td>
-                <td>--</td>
-                <td>--</td>
-              </tr>
+                                <tr>
+                                    <td><strong>20:00 ás 21:00</strong></td>
+                                    <td>MUAY THAI
+                                        <BR/>
+                                    </td>
+                                    <td>BOXE
+                                        <BR/>
+                                    </td>
+                                    <td>MUAY THAI
+                                        <BR/>
+                                    </td>
+                                    <td>BOXE
+                                        <BR/>
+                                    </td>
+                                    <td>MUAY THAI
+                                        <BR/>
+                                    </td>
+                                    <td>--</td>
+                                </tr>
 
-            </tbody>
-          </table>
-          </div>
-          </div>
-          </div>
-        </div>
-      </section>
+                                <tr class="linhabotton">
+                                    <td><strong>20:30 ás 22:00</strong></td>
+                                    <td>JIU JITSU <br/>
+                                    </td>
+                                    <td>JIU JITSU <br/>
+                                    </td>
+                                    <td>JIU JITSU <br/>
+                                    </td>
+                                    <td>JIU JITSU <br/>
+                                    </td>
+                                    <td>--</td>
+                                    <td>--</td>
+                                </tr>
 
-
-
-
-<!--=========== BEGAIN TEAM SECTION ================-->
-    <section id="team">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-md-12">
-            <!-- BEGAIN ABOUT HEADING -->
-            <div class="heading">
-              <h2 class="wow fadeInLeftBig">nossos</h2>
-              <h3 class="wow fadeInLeftBig animated ">grandes campeões</h3>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="team_area">
-              <!-- BEGAIN TEAM SLIDER -->
-              <div class="team_slider">
-                <!-- BEGAIN SINGLE TEAM SLIDE#1 -->
-                <div class="col-lg-3 col-md-3 col-sm-4">
-                  <div class="single_team wow fadeInUp">
-                    <div class="team_img">
-                      <img src="img/hg.jpg" alt="img">
-                    </div>
-                    <h5 class="">Lorem Ipsumi</h5>
-                    <span>CREF 000000 - G/SP</span>
-                    <p>Responsável Técnica</p>
-                    <!--div class="team_social">
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                      <a href="#"><i class="fa fa-google-plus"></i></a>
-                      <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div-->
-                  </div>
-                </div>
-                <!-- BEGAIN SINGLE TEAM SLIDE#2 -->
-                <div class="col-lg-3 col-md-3 col-sm-4">
-                  <div class="single_team wow fadeInUp">
-                    <div class="team_img">
-                      <img src="img/hg.jpg" alt="img">
-                    </div>
-                    <h5>Lorem Ipsum</h5>
-                    <span>Professor de jiu jitsu</span>
-                    <p>Faixa preta 2º grau (MKBJJ)</p>
-                    <!--div class="team_social">
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                      <a href="#"><i class="fa fa-google-plus"></i></a>
-                      <a href="#"><i class="fa fa-linkedin"></i></a>
-                    </div-->
-                  </div>
-                </div>
+        </div>
+    </section>
 
-                <!-- BEGAIN SINGLE TEAM SLIDE#4 -->
-                <div class="col-lg-3 col-md-3 col-sm-4">
-                  <div class="single_team wow fadeInUp">
-                    <div class="team_img">
-                      <img src="img/hg.jpg" alt="img">
+
+
+
+    <!--=========== BEGAIN TEAM SECTION ================-->
+    <section id="team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <!-- BEGAIN ABOUT HEADING -->
+                    <div class="heading">
+                        <h2 class="wow fadeInLeftBig">nossos</h2>
+                        <h3 class="wow fadeInLeftBig animated ">grandes campeões</h3>
                     </div>
-                     <h5>Lorem Ipsum</h5>
-                    <span>Professora de jiu jitsu para mulheres</span>
-                    <p>Faixa preta (MKBJJ)</p>
-                    <!--div class="team_social">
+                    <div class="team_area">
+                        <!-- BEGAIN TEAM SLIDER -->
+                        <div class="team_slider">
+                            <!-- BEGAIN SINGLE TEAM SLIDE#1 -->
+                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                <div class="single_team wow fadeInUp">
+                                    <div class="team_img">
+                                        <img src="img/hg.jpg" alt="img">
+                                    </div>
+                                    <h5 class="">Lorem Ipsumi</h5>
+                                    <span>CREF 000000 - G/SP</span>
+                                    <p>Responsável Técnica</p>
+                                    <!--div class="team_social">
                       <a href="#"><i class="fa fa-facebook"></i></a>
                       <a href="#"><i class="fa fa-twitter"></i></a>
                       <a href="#"><i class="fa fa-google-plus"></i></a>
                       <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div-->
-                  </div>
-                </div>
-                <!-- BEGAIN SINGLE TEAM SLIDE#5 -->
-                <div class="col-lg-3 col-md-3 col-sm-4">
-                  <div class="single_team wow fadeInUp">
-                    <div class="team_img">
-                      <img src="img/hg.jpg" alt="img">
-                    </div>
-                    <h5>Lorem Ipsum</h5>
-                    <span>Professor de Boxe (Centro Olímpico - Messias) - Professor de Muay Thai </span>
-                    <p>Kruang azul escuro (Chute Boxe)</p>
-                    <!--div class="team_social">
+                                </div>
+                            </div>
+                            <!-- BEGAIN SINGLE TEAM SLIDE#2 -->
+                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                <div class="single_team wow fadeInUp">
+                                    <div class="team_img">
+                                        <img src="img/hg.jpg" alt="img">
+                                    </div>
+                                    <h5>Lorem Ipsum</h5>
+                                    <span>Professor de jiu jitsu</span>
+                                    <p>Faixa preta 2º grau (MKBJJ)</p>
+                                    <!--div class="team_social">
                       <a href="#"><i class="fa fa-facebook"></i></a>
                       <a href="#"><i class="fa fa-twitter"></i></a>
                       <a href="#"><i class="fa fa-google-plus"></i></a>
                       <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div-->
-                  </div>
-                </div>
-                <!-- BEGAIN SINGLE TEAM SLIDE#6 -->
-                <!--div class="col-lg-3 col-md-3 col-sm-4">
+                                </div>
+                            </div>
+
+                            <!-- BEGAIN SINGLE TEAM SLIDE#4 -->
+                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                <div class="single_team wow fadeInUp">
+                                    <div class="team_img">
+                                        <img src="img/hg.jpg" alt="img">
+                                    </div>
+                                    <h5>Lorem Ipsum</h5>
+                                    <span>Professora de jiu jitsu para mulheres</span>
+                                    <p>Faixa preta (MKBJJ)</p>
+                                    <!--div class="team_social">
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <a href="#"><i class="fa fa-google-plus"></i></a>
+                      <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div-->
+                                </div>
+                            </div>
+                            <!-- BEGAIN SINGLE TEAM SLIDE#5 -->
+                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                <div class="single_team wow fadeInUp">
+                                    <div class="team_img">
+                                        <img src="img/hg.jpg" alt="img">
+                                    </div>
+                                    <h5>Lorem Ipsum</h5>
+                                    <span>Professor de Boxe (Centro Olímpico - Messias) - Professor de Muay Thai </span>
+                                    <p>Kruang azul escuro (Chute Boxe)</p>
+                                    <!--div class="team_social">
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <a href="#"><i class="fa fa-google-plus"></i></a>
+                      <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div-->
+                                </div>
+                            </div>
+                            <!-- BEGAIN SINGLE TEAM SLIDE#6 -->
+                            <!--div class="col-lg-3 col-md-3 col-sm-4">
                   <div class="single_team wow fadeInUp">
                     <div class="team_img">
                       <img src="img/andre.png" alt="img">
@@ -627,147 +646,144 @@ Boxe<br>
                       <a href="#"><i class="fa fa-google-plus"></i></a>
                       <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div-->
-                  <!-- /div>
+                            <!-- /div>
                 </div -->
-                <!-- BEGAIN SINGLE TEAM SLIDE#7 -->
-                <div class="col-lg-3 col-md-3 col-sm-4">
-                  <div class="single_team wow fadeInUp">
-                    <div class="team_img">
-                      <img src="img/hg.jpg" alt="img">
-                    </div>
-                    <h5>Lorem Ipsum</h5>
-                    <span>Professor de Capoeira</span>
-                    <p>Cordão Azul ponta vermelha (Grupo Inchuí)</p>
-                    <!--div class="team_social">
+                            <!-- BEGAIN SINGLE TEAM SLIDE#7 -->
+                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                <div class="single_team wow fadeInUp">
+                                    <div class="team_img">
+                                        <img src="img/hg.jpg" alt="img">
+                                    </div>
+                                    <h5>Lorem Ipsum</h5>
+                                    <span>Professor de Capoeira</span>
+                                    <p>Cordão Azul ponta vermelha (Grupo Inchuí)</p>
+                                    <!--div class="team_social">
                       <a href="#"><i class="fa fa-facebook"></i></a>
                       <a href="#"><i class="fa fa-twitter"></i></a>
                       <a href="#"><i class="fa fa-google-plus"></i></a>
                       <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div-->
-                  </div>
-                </div>
+                                </div>
+                            </div>
 
-                   <!-- BEGAIN SINGLE TEAM SLIDE#7 -->
-                <div class="col-lg-3 col-md-3 col-sm-4">
-                  <div class="single_team wow fadeInUp">
-                    <div class="team_img">
-                      <img src="img/hg.jpg" alt="img">
-                    </div>
-                    <h5>Lorem Ipsum</h5>
-                    <span>Professor de jiu jitsu </span>
-                    <p>Faixa preta</p>
-                    <!--div class="team_social">
+                            <!-- BEGAIN SINGLE TEAM SLIDE#7 -->
+                            <div class="col-lg-3 col-md-3 col-sm-4">
+                                <div class="single_team wow fadeInUp">
+                                    <div class="team_img">
+                                        <img src="img/hg.jpg" alt="img">
+                                    </div>
+                                    <h5>Lorem Ipsum</h5>
+                                    <span>Professor de jiu jitsu </span>
+                                    <p>Faixa preta</p>
+                                    <!--div class="team_social">
                       <a href="#"><i class="fa fa-facebook"></i></a>
                       <a href="#"><i class="fa fa-twitter"></i></a>
                       <a href="#"><i class="fa fa-google-plus"></i></a>
                       <a href="#"><i class="fa fa-linkedin"></i></a>
                     </div-->
-                  </div>
-                </div>
+                                </div>
+                            </div>
 
-              </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
     <!--=========== END TEAM SECTION ================-->
     <!--=========== BEGAIN CONTACT SECTION ================-->
     <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12">
-            <!-- START CONTACT HEADING -->
-            <div class="heading">
-              <h2 class="wow fadeInLeftBig">vamos</h2>
-              <h3 class="wow fadeInLeftBig animated ">nos falar</h3>
-              <p>SUA MENSAGEM SEGUE AUTOMATICAMENTE ENVIADA PARA NÓS;<br />
-               ENTRAREMOS EM CONTATO </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <!-- START CONTACT HEADING -->
+                    <div class="heading">
+                        <h2 class="wow fadeInLeftBig">vamos</h2>
+                        <h3 class="wow fadeInLeftBig animated ">nos falar</h3>
+                        <p>SUA MENSAGEM SEGUE AUTOMATICAMENTE ENVIADA PARA NÓS;<br /> ENTRAREMOS EM CONTATO </p>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="row">
+                <!-- BEGAIN CONTACT CONTENT -->
+                <div class="contact_content">
+                    <!-- BEGAIN CONTACT FORM -->
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div class="contact_form">
+
+                            <!-- FOR CONTACT FORM MESSAGE -->
+                            <div id="form-messages"></div>
+
+
+                            <form method="POST" action="contato_envia.asp" name="form" onsubmit="return valida(this)">
+                                <input class="form-control" name="nome" type="text" placeholder="NOME:">
+                                <input class="form-control" type="email" name="email" placeholder="E-MAIL">
+                                <input class="form-control" type="text" name="assunto" placeholder="ASSUNTO">
+                                <textarea class="form-control" cols="30" name="msg" rows="10" placeholder="MENSAGEM:"></textarea>
+                                <input class="submit_btn" type="submit" name="B1" value="ENVIAR">
+                            </form>
+                        </div>
+                    </div>
+                    <!-- BEGAIN CONTACT MAP -->
+                    <div class="col-lg-7 col-md-7 col-sm-7">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-          <!-- BEGAIN CONTACT CONTENT -->
-          <div class="contact_content">
-            <!-- BEGAIN CONTACT FORM -->
-            <div class="col-lg-5 col-md-5 col-sm-5">
-              <div class="contact_form">
-
-                <!-- FOR CONTACT FORM MESSAGE -->
-                <div id="form-messages"></div>
-
-
-                <form method="POST" action="contato_envia.asp" name="form" onsubmit="return valida(this)">
-                  <input class="form-control" name="nome" type="text" placeholder="NOME:">
-                  <input class="form-control" type="email" name="email" placeholder="E-MAIL">
-                  <input class="form-control" type="text" name="assunto" placeholder="ASSUNTO">
-                  <textarea class="form-control" cols="30" name="msg" rows="10" placeholder="MENSAGEM:"></textarea>
-                   <input class="submit_btn" type="submit" name="B1" value="ENVIAR" >
-                </form>
-              </div>
-            </div>
-            <!-- BEGAIN CONTACT MAP -->
-            <div class="col-lg-7 col-md-7 col-sm-7">
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
     <!--=========== END CONTACT SECTION ================-->
 
-     <!--=========== BEGAIN FOOTER ================-->
+    <!--=========== BEGAIN FOOTER ================-->
 
 
-        <footer id="footer">
-       <div class="container">
-         <div class="row">
-           <div class="col-lg-6 col-md-6 col-sm-6">
-             <div class="footer_left">
-        <!--=========== Designed By WpFreeware Team ================-->
-               <p>Lorem Ipsum| Sobreloja <br /> Novo Brooklyn | São Paulo |  CEP: Lorem Ipsum  <br />De Segunda a Sexta  das 7h às 22h <br /> Sábado das 10h às 13:00  <br /> 011 Lorem Ipsum</p>
-         <!--=========== Designed By WpFreeware Team ================-->
-             </div>
-           </div>
-           <div class="col-lg-2 col-md-2 col-sm-2">
-             <div class="footer_left">
-        <!--=========== Designed By WpFreeware Team ================-->
- <a href="http://mkbjj.com.br/"  target="_blank">
-                    <img src="img/logo_marco.png" alt="">
-         <!--=========== Designed By WpFreeware Team ================-->
-  </a>
-             </div>
-           </div>
-           <div class="col-lg-4 col-md-4 col-sm-4">
-             <div class="footer_right">
-               <ul class="social_nav">
-                 <li><a href="https://www.facebook.com/combat.fit.712/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                 <li><a href="https://www.instagram.com/combatfitacademia/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                 <li><a href="https://www.google.com.br/maps/place/Combat+Fit+Academia/@-23.6104028,-46.6908716,16z/data=!4m8!1m2!2m1!1sRua+Padre+Ant%C3%B4nio+Jos%C3%A9+dos+Santos,+1361+A+-+Sobreloja+-+Novo+Brooklyn+S%C3%A3o+Paulo,+SP!3m4!1s0x94ce50ca819abae5:0xa8646d9312fd6ee6!8m2!3d-23.6076699!4d-46.69013?hl=en" target="_blank"><i class="fa fa-map-marker"></i></a></li>
-               </ul>
-             </div>
-           </div>
-         </div>
-       </div>
-      </footer>
-   <!-- Google ANALYT -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="footer_left">
+                        <!--=========== Designed By WpFreeware Team ================-->
+                        <p>Lorem Ipsum| Sobreloja <br /> Novo Brooklyn | São Paulo | CEP: Lorem Ipsum <br />De Segunda a Sexta das 7h às 22h <br /> Sábado das 10h às 13:00 <br /> 011 Lorem Ipsum</p>
+                        <!--=========== Designed By WpFreeware Team ================-->
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                    <div class="footer_left">
+                        <!--=========== Designed By WpFreeware Team ================-->
+                        <a href="http://mkbjj.com.br/" target="_blank">
+                            <img src="img/logo_marco.png" alt="">
+                            <!--=========== Designed By WpFreeware Team ================-->
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="footer_right">
+                        <ul class="social_nav">
+                            <li><a href="@" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="@" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="@" target="_blank"><i class="fa fa-map-marker"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Google ANALYT -->
 
-        <script>
-      
+    <script>
+    </script>
 
-        </script>
+    <!-- Google ANALYT -->
+    <!--=========== END FOOTER ================-->
 
-     <!-- Google ANALYT -->
-      <!--=========== END FOOTER ================-->
-
-     <!-- Javascript Files
+    <!-- Javascript Files
      ================================================== -->
 
-     <!-- initialize jQuery Library -->
+    <!-- initialize jQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Google map -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="js/jquery.ui.map.js"></script>
-     <!-- For smooth animatin  -->
+    <!-- For smooth animatin  -->
     <script src="js/wow.min.js"></script>
     <!-- Bootstrap js -->
     <script src="js/bootstrap.min.js"></script>
@@ -785,5 +801,6 @@ Boxe<br>
 
     <!-- Custom js-->
     <script src="js/custom.js"></script>
-  </body>
+</body>
+
 </html>
